@@ -10,11 +10,12 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (events.length === 0) {
         scheduleDiv.innerHTML = 'No UFC events found.';
     } else {
-        // Create a list of events with date and time
+        // Create a list of events with date, time, and main event headliner
         scheduleDiv.innerHTML = events.map(event => `
             <div class="event">
                 <p><strong>${event.name}</strong></p>
                 <p>${event.dateTime}</p>
+                <p>${event.mainEvent}</p>
             </div>
         `).join('');
     }
