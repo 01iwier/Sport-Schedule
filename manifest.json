@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "My Sports Extension",
+  "description": "View upcoming sports events schedules.",
+  "version": "1.0",
+  "icons": {
+    "48": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "https://api.example.com/*" 
+  ]
+}
